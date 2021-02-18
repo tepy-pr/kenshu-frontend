@@ -1,0 +1,286 @@
+:root {
+  --primary-color: #24436f;
+  --secondary-color: #bfc9d7;
+  --link-color: #294c7a;
+  --text-color: #3b3b3b;
+  --gray-color: #f2f2f2;
+  --card-title-color: #3b3b3b;
+  --subcontent-text-color: #a2a2a2;
+}
+
+/* ニーズにリセットする */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-size: 1.2rem;
+  color: var(--text-color);
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  display: inline-block;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* 本スタイル */
+.header {
+  width: 100%;
+}
+.wrapper {
+  max-width: 1126px;
+  margin: 0 auto;
+  height: 100%;
+}
+
+.header__container {
+  height: 75px;
+  padding-top: 13px;
+  background-color: var(--primary-color);
+}
+
+/* header small section */
+.header__small__container {
+  width: 100%;
+  height: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+
+.header__logo__img {
+  width: 122px;
+  height: 22px;
+  margin-right: 18px;
+}
+.header__logo__description {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.2rem;
+  line-height: 18px;
+  color: var(--secondary-color);
+}
+
+.header__release__list {
+  display: flex;
+  align-items: center;
+  background: #345584;
+  border-radius: 4px;
+  padding: 8px 16px;
+}
+.header__release__item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+  line-height: 18px;
+  color: #fff;
+}
+.line {
+  background-color: var(--secondary-color);
+  width: 1px;
+  height: 13px;
+  margin: 0 10px;
+}
+
+.header__keyword {
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  overflow: hidden;
+}
+.header__keyword__input {
+  height: 100%;
+  border: none;
+  padding: 2px 16px;
+}
+.header__keyword__button {
+  width: 30px;
+  height: 100%;
+  background-color: #3081c9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* header-main section */
+.header__main__list {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  margin-top: 9px;
+}
+
+.header__main__item {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 1.3rem;
+  line-height: 19px;
+  color: #fff;
+}
+
+/* category section */
+.category__nav {
+  background: #fff;
+  height: 3.6rem;
+  padding: 1.2rem 0;
+}
+.category__list {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.category__item {
+  display: inline-block;
+  margin-right: 2rem;
+  color: var(--link-color);
+  font-size: 1.3rem;
+  line-height: 160%;
+}
+.category__item:last-child {
+  margin-right: 0;
+}
+
+/* ranking section */
+.ranking {
+  height: 263px;
+  background-color: var(--gray-color);
+}
+
+.ranking__list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ranking__card {
+  width: 181px;
+  height: 218px;
+  background-color: #fff;
+  margin-right: 0.8rem;
+}
+.ranking__card:last-child {
+  margin-right: 0;
+}
+.card__thumbnail {
+  position: relative;
+}
+.card__thumbnail__image {
+  height: 100px;
+  width: 100%;
+  object-fit: cover;
+}
+.card__rank {
+  position: absolute;
+  left: 0;
+  top: 0;
+  background-color: #294c7a;
+  width: 24px;
+  height: 24px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card__rank__text {
+  font-family: Roboto;
+  font-style: italic;
+  font-weight: bold;
+  font-size: 1.7rem;
+  line-height: 2.5rem;
+  color: #fff;
+}
+
+.card__content {
+  padding: 0.9rem 1rem;
+}
+.card__title {
+  font-size: 1.3rem;
+  line-height: 140%;
+  color: var(--card-title-color);
+}
+.card__subcontent {
+  color: var(--subcontent-text-color);
+}
+.card__time {
+  display: flex;
+  align-items: center;
+}
+.card__time__icon {
+  background: url('../images/articles/time.png');
+  width: 15px;
+  height: 15px;
+  margin-right: 0.5rem;
+}
+.card__time__text {
+  font-size: 1.2rem;
+  line-height: 100%;
+}
+.card__company-name {
+  font-size: 1.3rem;
+  line-height: 100%;
+}
+.card__stat {
+  font-size: 1.3rem;
+  line-height: 150%;
+}
+
+/* main section */
+.main {
+  padding: 4rem 0;
+}
+/* content section */
+.content {
+  width: 780px;
+  display: inline-block;
+}
+.content__title {
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 36px;
+  color: var(--card-title-color);
+}
+
+/* sidebar section */
+.sidebar {
+  width: 312px;
+  display: inline-block;
+}
+
+.sidebar__item__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 27px;
+  color: var(--card-title-color);
+}
+
+/* util classes */
+.is-active {
+  font-weight: bold;
+}
+.list__wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}

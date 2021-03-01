@@ -1,0 +1,28 @@
+{
+  "name": "kenshu-frontend",
+  "description": "フロントエンド研修",
+  "version": "0.1.0",
+  "main": "index.html",
+  "scripts": {
+    "build": "node-sass ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tepy-pr/kenshu-frontend.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/tepy-pr/kenshu-frontend/issues"
+  },
+  "homepage": "https://github.com/tepy-pr/kenshu-frontend#readme",
+  "dependencies": {
+    "node-sass": "^5.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^5.24.2",
+    "webpack-cli": "^4.5.0"
+  }
+}

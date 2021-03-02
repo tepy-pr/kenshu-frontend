@@ -1,210 +1,12 @@
-:root {
-  --primary-color: #24436f;
-  --secondary-color: #bfc9d7;
-  --link-color: #294c7a;
-  --text-color: #3b3b3b;
-  --gray-color: #f2f2f2;
-  --card-title-color: #3b3b3b;
-  --subcontent-text-color: #a2a2a2;
-  --article-title-color: #3b3b3b;
-  --cta-bg-color: #3081c9;
-  --black-color: #000000;
-  --footer-text-color: #797979;
-}
-
-/* ニーズにリセットする */
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html {
-  font-size: 62.5%;
-}
-
-body {
-  font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
-  font-size: 1.2rem;
-  color: var(--text-color);
-}
-p,
-h1,
-h2,
-h3,
-h4 {
-  margin: 0;
-}
-ul {
-  margin: 0;
-  padding: 0;
-  list-style-type: none;
-}
-li {
-  display: inline-block;
-}
-
-a:link,
-a:visited,
-a:hover,
-a:active {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* 本スタイル */
-.header {
-  width: 100%;
-}
-
-.header__wrapper {
-  height: 75px;
-  padding-top: 13px;
-  background-color: var(--primary-color);
-}
-
-/* header small section */
-.top-header {
-  width: 100%;
-  height: 30px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.logo--with-desc {
-  display: flex;
-  align-items: center;
-}
-
-.logo__img {
-  width: 122px;
-  height: 22px;
-  margin-right: 18px;
-}
-
-.logo__description {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.2rem;
-  color: var(--secondary-color);
-}
-
-.menu-nav__list {
-  display: flex;
-  align-items: center;
-  background: #345584;
-  border-radius: 4px;
-  padding: 8px 16px;
-}
-
-.menu-nav__item {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.3rem;
-  color: #fff;
-}
-
-.menu-nav__item + .menu-nav__item::before {
-  content: '';
-  border: 1px solid var(--secondary-color);
-  margin: 0 10px;
-}
-
-.search-box {
-  display: flex;
-  align-items: center;
-  border-radius: 4px;
-  overflow: hidden;
-}
-
-.search-box__input {
-  height: 100%;
-  border: none;
-  padding: 2px 16px;
-  width: 258px;
-}
-
-.search-box__input::placeholder {
-  font-size: 1.3rem;
-  color: #bbbbbb;
-}
-
-.search-box__btn {
-  width: 30px;
-  height: 100%;
-  background-color: #3081c9;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-/* header-main section */
-.main-nav__list {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  margin-top: 9px;
-}
-
-.main-nav__item {
-  font-style: normal;
-  font-weight: normal;
-  font-size: 1.3rem;
-  color: var(--secondary-color);
-}
-
-.main-nav__item:hover {
-  font-weight: 900;
-  color: #fff;
-}
-
-.main-nav__item + .main-nav__item::before {
-  content: '';
-  border: 1px solid var(--secondary-color);
-  margin: 0 10px;
-}
-
-.main-nav__item--active {
-  color: #fff;
-  font-weight: bold;
-}
-
-/* category section */
-.category {
-  background: #fff;
-  height: 3.6rem;
-  padding: 1.2rem 0;
-}
-
-.category__list {
-  margin: 0 auto;
-  text-align: center;
-}
-
-.category__item {
-  display: inline-block;
-  margin-right: 2rem;
-  color: var(--link-color);
-  font-size: 1.3rem;
-  transition: all 0.2s ease-out;
-}
-
-.category__item--active {
-  font-weight: bold;
-}
-
-.category__item:hover {
-  font-weight: 700;
-}
-
-.category__item:last-child {
-  margin-right: 0;
-}
+@import 'var';
+@import 'base';
+@import './blocks/header';
+@import './blocks/category';
 
 /* ranking section */
 .ranking {
   height: 263px;
-  background-color: var(--gray-color);
+  background-color: $gray-color;
 }
 
 .ranking__list {
@@ -222,8 +24,8 @@ a:active {
 }
 
 .ranking-card:hover .ranking-cardTitle {
-  text-decoration: underline var(--primary-color);
-  color: var(--primary-color);
+  text-decoration: underline $primary-color;
+  color: $primary-color;
 }
 
 .ranking-card:hover .ranking-card__img {
@@ -274,13 +76,13 @@ a:active {
 .ranking-cardTitle {
   font-size: 1.3rem;
   line-height: 1.4;
-  color: var(--card-title-color);
+  color: $card-title-color;
   height: 57.6px;
   transition: all 0.2s ease-out;
 }
 
 .ranking-card__sub-content {
-  color: var(--subcontent-text-color);
+  color: $subcontent-text-color;
 }
 
 .ranking-card__date {
@@ -327,7 +129,7 @@ a:active {
   font-weight: bold;
   font-size: 24px;
   line-height: 1.5;
-  color: var(--card-title-color);
+  color: $card-title-color;
 }
 
 .article {
@@ -358,8 +160,8 @@ a:active {
 }
 
 .article-card:hover .article-card__title {
-  text-decoration: underline var(--primary-color);
-  color: var(--primary-color);
+  text-decoration: underline $primary-color;
+  color: $primary-color;
 }
 
 .article-card:nth-child(2n) {
@@ -376,7 +178,7 @@ a:active {
   font-weight: bold;
   font-size: 1.4rem;
   line-height: 1.6;
-  color: var(--article-title-color);
+  color: $article-title-color;
   max-width: 265px;
   margin-right: 1.5rem;
   transition: all 0.2s ease-out;
@@ -392,7 +194,7 @@ a:active {
   display: flex;
   justify-content: start;
   align-items: center;
-  color: var(--subcontent-text-color);
+  color: $subcontent-text-color;
   margin-top: 0.7rem;
 }
 
@@ -411,7 +213,7 @@ a:active {
 .main-content__more-btn {
   width: 110px;
   height: 38px;
-  background: var(--cta-bg-color);
+  background: $cta-bg-color;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24);
   border-radius: 2px;
   display: flex;
@@ -436,7 +238,7 @@ a:active {
   font-weight: bold;
   font-size: 18px;
   line-height: 1.5;
-  color: var(--card-title-color);
+  color: $card-title-color;
 }
 
 .keyword__list {
@@ -451,7 +253,7 @@ a:active {
   background: #f1f1f1;
   border-radius: 1.1rem;
   font-size: 1.2rem;
-  color: var(--text-color);
+  color: $text-color;
   padding: 0.4rem 0.8rem;
   margin-right: 1rem;
   margin-bottom: 9px;
@@ -462,7 +264,7 @@ a:active {
 
 .keyword__item:hover {
   font-weight: 900;
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 .keyword__more-btn {
@@ -470,7 +272,7 @@ a:active {
   width: max-content;
   border-radius: 1.1rem;
   font-size: 1.2rem;
-  color: var(--text-color);
+  color: $text-color;
   padding: 0.4rem 0.8rem;
   margin-right: 1rem;
   margin-bottom: 9px;
@@ -483,7 +285,7 @@ a:active {
 
 .keyword__more-btn:hover {
   font-weight: 900;
-  color: var(--primary-color);
+  color: $primary-color;
 }
 
 /* footer section */
@@ -493,7 +295,7 @@ a:active {
 
 .footer__content {
   padding: 6rem 0 0.9rem;
-  color: var(--footer-text-color);
+  color: $footer-text-color;
 }
 
 .footer-content__list {
@@ -517,7 +319,7 @@ a:active {
 .footer-content__title {
   font-size: 1.3rem;
   line-height: 1;
-  color: var(--black-color);
+  color: $black-color;
   min-height: 13px;
 }
 
@@ -536,8 +338,8 @@ a:active {
 }
 
 .footer-link__item:hover {
-  color: var(--black-color);
-  text-decoration: underline var(--black-color);
+  color: $black-color;
+  text-decoration: underline $black-color;
 }
 
 .footer-term {
@@ -552,8 +354,8 @@ a:active {
 }
 
 .footer-term__item:hover {
-  color: var(--black-color);
-  text-decoration: underline var(--black-color);
+  color: $black-color;
+  text-decoration: underline $black-color;
 }
 
 .footer-term__item:last-child {
@@ -590,7 +392,7 @@ a:active {
 .u-btn--primary {
   width: 110px;
   height: 38px;
-  background: var(--cta-bg-color);
+  background: $cta-bg-color;
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.24);
   border-radius: 2px;
   display: flex;

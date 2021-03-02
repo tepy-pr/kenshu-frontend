@@ -1,0 +1,30 @@
+.category {
+  background: #fff;
+  height: 3.6rem;
+  padding: 1.2rem 0;
+}
+
+.category__list {
+  margin: 0 auto;
+  text-align: center;
+}
+
+.category__item {
+  display: inline-block;
+  margin-right: 2rem;
+  color: $link-color;
+  font-size: 1.3rem;
+  transition: all 0.2s ease-out;
+}
+
+.category__item--active {
+  font-weight: bold;
+}
+
+.category__item:hover {
+  font-weight: 700;
+}
+
+.category__item:last-child {
+  margin-right: 0;
+}

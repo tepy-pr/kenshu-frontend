@@ -1,0 +1,46 @@
+.keyword {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+  }
+  &__item {
+    display: inline-flex;
+    width: max-content;
+    background: #f1f1f1;
+    border-radius: 1.1rem;
+    font-size: 1.2rem;
+    color: $text-color;
+    padding: 0.4rem 0.8rem;
+    margin-right: 1rem;
+    margin-bottom: 9px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: $primary-color;
+      color: #fff;
+    }
+  }
+
+  &__more-btn {
+    display: inline-flex;
+    width: max-content;
+    border-radius: 1.1rem;
+    font-size: 1.2rem;
+    color: $text-color;
+    padding: 0.4rem 0.8rem;
+    margin-right: 1rem;
+    margin-bottom: 9px;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.2s ease-out;
+    background: #ffffff;
+    border: 1px solid #f1f1f1;
+    &:hover {
+      font-weight: 900;
+      color: $primary-color;
+    }
+  }
+}

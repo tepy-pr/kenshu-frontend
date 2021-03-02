@@ -1,0 +1,13 @@
+@import 'keyword';
+
+.sidebar {
+  max-width: $SidebarMaxWidth;
+  margin-left: 3.7rem;
+}
+
+.sidebar-item__title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 1.5;
+  color: $card-title-color;
+}

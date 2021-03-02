@@ -491,7 +491,7 @@ a:active {
   height: 356px;
 }
 
-.footer__content {
+.footer-content {
   padding: 6rem 0 0.9rem;
   color: var(--footer-text-color);
 }

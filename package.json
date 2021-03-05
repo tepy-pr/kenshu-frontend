@@ -6,6 +6,7 @@
   "scripts": {
     "build:css": "cross-env NODE_ENV=production node ./node_scripts/compile_sass.js",
     "watch:css": "cross-env NODE_ENV=development nodemon -e scss ./node_scripts/compile_sass.js",
+    "lint:css": "stylelint '**/*.scss'",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -23,6 +24,9 @@
     "cross-env": "^7.0.3",
     "node-sass": "^5.0.0",
     "node-sass-glob-importer": "^5.3.2",
-    "nodemon": "^2.0.7"
+    "nodemon": "^2.0.7",
+    "stylelint": "^13.11.0",
+    "stylelint-config-standard": "^20.0.0",
+    "stylelint-scss": "^3.19.0"
   }
 }

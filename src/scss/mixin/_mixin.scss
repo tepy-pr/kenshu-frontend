@@ -3,7 +3,9 @@
   @if $variant == primary {
     background-color: $ctaColor;
     color: $white;
-  } @else if $variant == secondary {
+  }
+  // prettier-ignore
+  @else if $variant == secondary {
     background-color: #fff;
     color: $textPrimaryColor;
     border: 1px solid #f1f1f1;
@@ -29,7 +31,9 @@
   @if $type == self {
     margin: 0 auto;
     text-align: center;
-  } @else if $type == flex {
+  }
+  // prettier-ignore
+  @else if $type == flex {
     display: flex;
     justify-content: center;
     align-items: center;

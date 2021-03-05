@@ -3,16 +3,15 @@
   height: 3.6rem;
   padding: 1.2rem 0;
   &__list {
-    margin: 0 auto;
-    text-align: center;
+    @include center(self);
   }
 
   &__item {
     display: inline-block;
     margin-right: 2rem;
-    color: $link-color;
+    color: $linkColor;
     font-size: 1.3rem;
-    transition: all 0.2s ease-out;
+    @include animate();
     &--active {
       font-weight: bold;
     }

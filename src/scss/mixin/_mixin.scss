@@ -1,0 +1,53 @@
+@mixin btn($variant: 'default') {
+  @extend %btn;
+  @if $variant == primary {
+    background-color: $ctaColor;
+    color: $white;
+  } @else if $variant == secondary {
+    background-color: #fff;
+    color: $textPrimaryColor;
+    border: 1px solid #f1f1f1;
+    border-radius: 1.1rem;
+    font-size: 1.2rem;
+    padding: 0.4rem 0.8rem;
+    &:hover {
+      font-weight: 900;
+      color: $primaryColor;
+    }
+  }
+}
+
+@mixin line($h-space: 1rem) {
+  & + &::before {
+    content: '';
+    border: 1px solid $secondaryColor;
+    margin: 0 $h-space;
+  }
+}
+
+@mixin center($type: self) {
+  @if $type == self {
+    margin: 0 auto;
+    text-align: center;
+  } @else if $type == flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+@mixin left-icon($icon: '', $width: 15px, $height: 15px) {
+  &::before {
+    content: url($icon);
+    width: $width;
+    height: $height;
+    margin-right: 0.5rem;
+    vertical-align: middle;
+  }
+}
+
+@mixin animate($type: default, $target: all) {
+  @if $type == default {
+    transition: $target 0.2s ease-in-out;
+  }
+}

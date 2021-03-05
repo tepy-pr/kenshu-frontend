@@ -1,0 +1,31 @@
+.keyword {
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 4rem;
+  }
+  &__item {
+    @include center(flex);
+    width: max-content;
+    background: $grayDarkerBgColor;
+    border-radius: 1.1rem;
+    font-size: 1.2rem;
+    color: $textPrimaryColor;
+    padding: 0.4rem 0.8rem;
+    margin-right: 1rem;
+    margin-bottom: 9px;
+    transition: all 0.25s ease-in-out;
+    cursor: pointer;
+    &:hover {
+      background-color: $primaryColor;
+      color: $white;
+    }
+  }
+
+  &__more-btn {
+    @include btn('secondary');
+    @include animate();
+    margin-right: 1rem;
+    margin-bottom: 9px;
+  }
+}

@@ -1,7 +1,7 @@
 /* ranking section */
 .ranking {
   height: 263px;
-  background-color: $gray-color;
+  background-color: $grayBgColor;
   &__list {
     display: flex;
     justify-content: space-between;
@@ -11,17 +11,19 @@
 }
 
 .ranking-card {
+  $block: &;
+
   width: 100%;
   height: 218px;
   background-color: #fff;
   margin-right: 0.8rem;
 
   &:hover {
-    .ranking-card__title {
-      text-decoration: underline $primary-color;
-      color: $primary-color;
+    #{$block}__title {
+      text-decoration: underline $primaryColor;
+      color: $primaryColor;
     }
-    .ranking-card__img {
+    #{$block}__img {
       transform: scale(1.1, 1.1);
     }
   }
@@ -50,15 +52,15 @@
       font-weight: bold;
       font-size: 1.7rem;
       color: #fff;
-      transition: all 0.2s ease-in-out;
       z-index: 1;
+      @include animate();
     }
   }
   &__img {
     height: 100px;
     width: 100%;
     object-fit: cover;
-    transition: all 0.2s ease-in-out;
+    @include animate();
   }
   &__content {
     padding: 0.9rem 1rem;
@@ -67,23 +69,17 @@
   &__title {
     font-size: 1.3rem;
     line-height: 1.4;
-    color: $card-title-color;
+    color: $textPrimaryColor;
     height: 57.6px;
-    transition: all 0.2s ease-out;
+    @include animate();
   }
   &__sub-content {
-    color: $subcontent-text-color;
+    color: $textSecondaryColor;
   }
   &__date {
     font-size: 1.2rem;
     line-height: 1.2;
-    &::before {
-      content: url(#{$IMGPATH}articles/time.png);
-      width: 15px;
-      height: 15px;
-      margin-right: 0.5rem;
-      vertical-align: middle;
-    }
+    @include left-icon('#{$IMGPATH}articles/time.png');
   }
 
   &__company-name {

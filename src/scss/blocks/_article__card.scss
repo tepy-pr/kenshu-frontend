@@ -11,8 +11,8 @@
   }
 
   &:hover &__title {
-    text-decoration: underline $primary-color;
-    color: $primary-color;
+    text-decoration: underline $primaryColor;
+    color: $primaryColor;
   }
   &:nth-child(2n) {
     margin-right: 0;
@@ -28,22 +28,22 @@
     font-weight: bold;
     font-size: 1.4rem;
     line-height: 1.6;
-    color: $article-title-color;
+    color: $textPrimaryColor;
     max-width: 265px;
     margin-right: 1.5rem;
-    transition: all 0.2s ease-out;
+    @include animate();
   }
   &__thumbnail {
     height: 66px;
     width: 100px;
-    transition: all 0.2s ease-in-out;
+    @include animate();
   }
 
   &__info {
     display: flex;
     justify-content: start;
     align-items: center;
-    color: $subcontent-text-color;
+    color: $textSecondaryColor;
     margin-top: 0.7rem;
   }
 

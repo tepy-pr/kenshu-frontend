@@ -4,8 +4,8 @@
   "version": "0.1.0",
   "main": "index.html",
   "scripts": {
-    "build:css": "node-sass -r -o dist/css src/css/main.scss",
-    "watch:css": "node-sass -w -r -o dist/css src/css/main.scss",
+    "build:css": "cross-env NODE_ENV=production node ./node_scripts/compile_sass.js",
+    "watch:css": "cross-env NODE_ENV=development nodemon -e scss ./node_scripts/compile_sass.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -19,7 +19,10 @@
     "url": "https://github.com/tepy-pr/kenshu-frontend/issues"
   },
   "homepage": "https://github.com/tepy-pr/kenshu-frontend#readme",
-  "dependencies": {
-    "node-sass": "^5.0.0"
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "node-sass": "^5.0.0",
+    "node-sass-glob-importer": "^5.3.2",
+    "nodemon": "^2.0.7"
   }
 }

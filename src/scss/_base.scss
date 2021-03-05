@@ -14,7 +14,7 @@ html {
 body {
   font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
   font-size: 1.2rem;
-  color: $text-color;
+  color: $textPrimaryColor;
 }
 p,
 h1,
@@ -38,4 +38,15 @@ a:hover,
 a:active {
   color: inherit;
   text-decoration: none;
+}
+
+// base element styles
+
+%btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
 }

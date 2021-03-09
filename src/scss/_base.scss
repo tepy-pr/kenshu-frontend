@@ -1,0 +1,52 @@
+@import 'modern-normalized';
+
+/* ニーズにリセットする */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  font-size: 1.2rem;
+  color: $textPrimaryColor;
+}
+p,
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+li {
+  display: inline-block;
+}
+
+a:link,
+a:visited,
+a:hover,
+a:active {
+  color: inherit;
+  text-decoration: none;
+}
+
+// base element styles
+
+%btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+}

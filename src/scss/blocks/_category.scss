@@ -1,0 +1,25 @@
+.category {
+  background: #fff;
+  height: 3.6rem;
+  padding: 1.2rem 0;
+  &__list {
+    @include center(self);
+  }
+
+  &__item {
+    display: inline-block;
+    margin-right: 2rem;
+    color: $linkColor;
+    font-size: 1.3rem;
+    @include animate();
+    &--active {
+      font-weight: bold;
+    }
+    &:hover {
+      font-weight: 700;
+    }
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+}

@@ -1,0 +1,92 @@
+/* ranking section */
+.ranking {
+  height: 263px;
+  background-color: $grayBgColor;
+  &__list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    counter-reset: rank;
+  }
+}
+
+.ranking-card {
+  $block: &;
+  width: 100%;
+  height: 218px;
+  background-color: #fff;
+  margin-right: 0.8rem;
+
+  &:hover {
+    #{$block}__title {
+      text-decoration: underline $primaryColor;
+      color: $primaryColor;
+    }
+    #{$block}__img {
+      transform: scale(1.1, 1.1);
+    }
+  }
+
+  &:last-child {
+    margin-right: 0;
+  }
+
+  &__thumbnail {
+    position: relative;
+    overflow: hidden;
+    &::before {
+      content: counter(rank);
+      counter-increment: rank;
+      position: absolute;
+      left: 0;
+      top: 0;
+      background-color: #294c7a;
+      width: 24px;
+      height: 24px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: Roboto;
+      font-style: italic;
+      font-weight: bold;
+      font-size: 1.7rem;
+      color: #fff;
+      z-index: 1;
+      @include animate();
+    }
+  }
+  &__img {
+    height: 100px;
+    width: 100%;
+    object-fit: cover;
+    @include animate();
+  }
+  &__content {
+    padding: 0.9rem 1rem;
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    line-height: 1.4;
+    color: $textPrimaryColor;
+    height: 57.6px;
+    @include animate();
+  }
+  &__sub-content {
+    color: $textSecondaryColor;
+  }
+  &__date {
+    font-size: 1.2rem;
+    line-height: 1.2;
+    @include left-icon('#{$IMGPATH}articles/time.png');
+  }
+
+  &__company-name {
+    font-size: 1.3rem;
+    line-height: 1;
+  }
+  &__view-count {
+    font-size: 1.2rem;
+    line-height: 1.5;
+  }
+}
